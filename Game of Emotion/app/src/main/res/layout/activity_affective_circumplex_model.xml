@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.tangq.bodymapsofemotions.AffectiveCircumplexModel">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:id="@+id/tvTouchToMove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text=" Please touch the  circle to show you emotion"
+            android:textColor="@android:color/background_light"
+            android:textSize="15dp"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_marginTop="3dp"
+            android:layout_height="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#f2eded" />
+
+        <com.example.tangq.bodymapsofemotions.AffectiveCircumplexView
+            android:id="@+id/affectiveView"
+            android:layout_width="match_parent"
+            android:layout_height="482dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/circumplex_model" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/button_style"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:onClick="submitClick"
+            android:text="Submit" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

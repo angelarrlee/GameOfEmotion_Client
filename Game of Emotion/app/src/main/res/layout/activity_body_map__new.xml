@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:id="@+id/root"
+    tools:context="com.example.tangq.bodymapsofemotions.BodyMap_New">
+
+
+    <LinearLayout
+        android:id="@+id/buttonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSharp"
+            style="@style/icon_button_style"
+            android:tag="sharp"
+            android:background="@drawable/sharp"/>
+
+        <Button
+            android:id="@+id/btnPulsing"
+            style="@style/icon_button_style"
+            android:tag="pulsing"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnSharp"
+            android:layout_toRightOf="@+id/btnSharp"
+            android:background="@drawable/bulb"/>
+
+        <Button
+            android:id="@+id/btnTight"
+            style="@style/icon_button_style"
+            android:tag="tightening"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnPulsing"
+            android:layout_toRightOf="@+id/btnPulsing"
+            android:background="@drawable/knot" />
+
+        <Button
+            android:id="@+id/btnWarm"
+            style="@style/icon_button_style"
+            android:tag="warmth"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnTight"
+            android:layout_toRightOf="@+id/btnTight"
+            android:background="@drawable/heart" />
+
+        <Button
+            android:id="@+id/btnChill"
+            style="@style/icon_button_style"
+            android:tag="chill"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnWarm"
+            android:layout_toRightOf="@+id/btnWarm"
+            android:background="@drawable/snowflake" />
+        <Button
+            android:id="@+id/btnHeavy"
+            style="@style/icon_button_style"
+            android:tag="heavy"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnChill"
+            android:layout_toRightOf="@+id/btnChill"
+            android:background="@drawable/weight" />
+
+        <Button
+            android:id="@+id/btnSink"
+            style="@style/icon_button_style"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/btnHeavy"
+            android:layout_toRightOf="@+id/btnHeavy"
+            android:background="@drawable/anchor"
+            android:tag="sinking" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_alignBaseline="@+id/btnSink"
+            android:layout_alignBottom="@+id/btnSink"
+            android:layout_toEndOf="@+id/btnSink"
+            android:layout_toRightOf="@+id/btnSink"
+            android:text="Size"
+            android:textAlignment="center"
+            android:textSize="12dp" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            style="@style/func_button_style"
+            android:layout_width="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/btnMinus"
+            android:layout_toStartOf="@+id/btnMinus"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            style="@style/func_button_style"
+            android:layout_width="25dp"
+            android:layout_above="@+id/body_layout"
+            android:layout_toLeftOf="@+id/btnReset"
+            android:layout_toStartOf="@+id/btnReset"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnReset"
+            style="@style/func_button_style"
+            android:layout_above="@+id/body_layout"
+            android:layout_alignEnd="@+id/line"
+            android:layout_alignRight="@+id/line"
+            android:text="Rst" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/buttonPanel"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#f2eded"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/body_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@+id/line">
+
+        <ImageView
+            android:id="@+id/body_front"
+            android:layout_width="185dp"
+            android:layout_height="460dp"
+            android:background="@drawable/body_map_model_front" />
+
+        <ImageView
+            android:id="@+id/body_back"
+            android:layout_width="185dp"
+            android:layout_height="460dp"
+            android:background="@drawable/body_map_model_back"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTips"
+        style="@style/textView_style"
+        android:layout_below="@+id/body_layout"
+        android:layout_centerHorizontal="true"
+        android:text="At most 10 icons allowed" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        style="@style/button_style"
+        android:layout_below="@+id/tvTips"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:text="Submit" />
+
+
+
+
+</RelativeLayout>
